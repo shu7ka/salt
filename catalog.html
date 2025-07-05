@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>catalog</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 150vh; /* для прокрутки вниз */
+        background-image: url("main1.jfif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: "Play", sans-serif;
+        color: rgb(249, 221, 221);
+        text-shadow: 0 0 0px #f4ebeb;
+        position: relative;
+      }
+
+      .text-block {
+        position: absolute;
+        top: 170px;
+        left: 100px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 3.4em;
+        line-height: 1.2;
+      }
+
+      h2 {
+        margin-top: 50px;
+        font-size: 2.1em;
+        line-height: 1.3;
+        margin-bottom: 0;
+      }
+
+      .btn {
+        font-family: "Play", sans-serif;
+        color: #000000;
+        padding: 12px 30px;
+        font-size: 1.1em;
+        background-color: rgb(204, 203, 203);
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: rgba(249, 221, 221, 1);
+      }
+
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px 20px;
+        padding: 10px 60px 0 60px; /* сверху и по бокам отступ */
+        box-sizing: border-box;
+        position: relative;
+        top: 100px; /* ниже блока с заголовками */
+      }
+
+      .logo-text {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        color: rgb(204, 203, 203);
+        font-family: "Play", sans-serif;
+        z-index: 10;
+        line-height: 1;
+      }
+
+      .main-name {
+        font-size: 2.1em;
+        font-weight: bold;
+      }
+
+      .sub-name {
+        font-size: 1.2em;
+        opacity: 0.85;
+      }
+
+      /* Карточки товаров */
+      .catalog {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1200px;
+        margin: 150px auto 40px;
+        padding: 0 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        min-height: 310px; /* добавим минимальную высоту для карточки */
+        background: rgba(255 255 255 / 0.85);
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 6px 15px rgb(0 0 0 / 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        height: 260px; /* увеличил с 140px на 200px */
+        object-fit: cover;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .card .card-title {
+        padding: 15px;
+        font-weight: 600;
+        font-size: 1.3em;
+        text-align: center;
+      }
+       .card-price {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  margin-top: auto; /* Чтобы цена была внизу карточки, если карточка растягивается */
+  padding: 10px 15px 20px;
+}
+
+
+
+      /* 📱 Адаптив */
+      @media (max-width: 768px) {
+        .button-grid {
+          grid-template-columns: repeat(2, 1fr);
+          padding: 30px 20px;
+          top: 320px;
+        }
+
+        .btn {
+          font-size: 1em;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-text">
+      <div class="main-name">Аврора</div>
+    </div>
+
+    <div class="button-grid">
+      <a href="catalog.html" class="btn">Соль фасованная по 1 кг</a>
+      <a href="page2.html" class="btn">Соль весовая по 50 кг и МКР</a>
+      <a href="page3.html" class="btn">Пищевые добавки</a>
+      <a href="page4.html" class="btn">Соль для водоподготовки</a>
+      <a href="page5.html" class="btn">Соль для животных</a>
+      <a href="page6.html" class="btn">Соль техническая</a>
+      <a href="page7.html" class="btn">Соль для SPA-процедур</a>
+      <a href="page8.html" class="btn">Грунт и удобрения</a>
+    </div>
+
+    <div class="catalog">
+      <a href="product1.html" class="card">
+        <img src="s1.png" alt="Соль фасованная по 1 кг" />
+        <div class="card-title">Соль выварочная экстра</div>
+        <div class="card-price">от 20.5 ₽/кг</div>
+      </a>
+      <a href="product2.html" class="card">
+        <img src="s2.jpg" alt="Соль весовая по 50 кг и МКР" />
+        <div class="card-title">Соль выварочная экстра йодированная</div>
+        <div class="card-price">от 21 ₽/кг</div>
+      </a>
+      <a href="product3.html" class="card">
+        <img src="s3.jpg" alt="Пищевые добавки" />
+        <div class="card-title"> Соль Славяночка 1 помол</div>
+        <div class="card-price">от 11.2 ₽/кг</div>
+      </a>
+      <a href="product4.html" class="card">
+        <img src="s4.jpg" alt="Соль для водоподготовки" />
+        <div class="card-title">Соль пищевая 1 помол  «Без добавок»</div>
+        <div class="card-price">от 12.5 ₽/кг</div>
+      </a>
+      <a href="product5.html" class="card">
+        <img src="s5.jpg" alt="Соль для животных" />
+        <div class="card-title">Соль пищевая 1 помол йодированная</div>
+        <div class="card-price">от 12.7 ₽/кг</div>
+      </a>
+      <a href="product6.html" class="card">
+        <img src="s6.jpg" alt="Соль техническая" />
+        <div class="card-title"> Соль пищевая каменная «Посольская» 2 помол</div>
+        <div class="card-price">от 13.6 ₽/кг</div>
+      </a>
+      <a href="product7.html" class="card">
+        <img src="s7.jpg" alt="Соль для SPA-процедур" />
+        <div class="card-title">Соль пищевая "Океаническая Premium" </div>
+        <div class="card-price">30 ₽/шт</div>
+      </a>
+      </a>
+    </div>
+  </body>
+</html>
